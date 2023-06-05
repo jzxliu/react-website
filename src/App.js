@@ -10,7 +10,9 @@ function App() {
           <Router>
               <Navbar />
               <Routes>
-                  <Route path='/' component={Home} />
+                  <Route path='/'>
+                      <Route index element={<Home/>}/>
+                  </Route>
               </Routes>
           </Router>
       </>

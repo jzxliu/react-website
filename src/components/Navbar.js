@@ -1,33 +1,20 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import {Link} from 'react-router-dom';
 import './Navbar.css';
-import {Button} from "./Button";
 
 function Navbar() {
     const [click, setClick] = useState(false);
-    const [button, setButton] = useState(true);
 
     const handleClick = () => setClick(!click);
     const closeMobileMenu = () => setClick(false);
 
-    const showButton = () => {
-        if(window.innerWidth <= 960){
-            setButton(false);
-        } else {
-            setButton(true);
-        }
-    };
-
-    useEffect(()=>{showButton()}, []);
-
-    window.addEventListener('resize', showButton);
 
     return (
         <>
             <nav className='navbar'>
                 <div className='navbar-container'>
                     <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
-                        Jack's RAM &nbsp; <i className="fa-solid fa-shield-cat"/>
+                        Jack's RAM <i className="fa-solid fa-ghost"/>
                     </Link>
                 </div>
                 <div className='menu-icon' onClick = {handleClick}>
@@ -49,13 +36,25 @@ function Navbar() {
                             Projects
                         </Link>
                     </li>
-                    <li className="nav-item">
-                        <Link to='/sign-up' className='nav-links-mobile' onClick={closeMobileMenu} >
-                            Sign Up
+                    <div className="media-display">
+                        <Link
+                            to='https://www.instagram.com/jzxliu/'
+                            className='nav-links-mobile'
+                            onClick={closeMobileMenu}
+                        >
+                            <i className="fa-brands fa-instagram"/>
                         </Link>
-                    </li>
+
+                        <Link
+                            to='https://open.spotify.com/user/ez0xpfhfna9e7qllhbi1j8t4y?si=fe9d15fccdad4cf6'
+                            className='nav-links-mobile'
+                            onClick={closeMobileMenu}
+                        >
+                            <i className="fa-brands fa-spotify"></i>
+                        </Link>
+                    </div>
                 </ul>
-                {button && <Button buttonStyle='btn-outline'>SIGN UP</Button> }
+
             </nav>
         </>
     );

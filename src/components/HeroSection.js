@@ -1,31 +1,38 @@
 import React from "react";
 import '../App.css';
-import {Button} from "./Button";
 import './HeroSection.css';
+import {Button} from "./Button";
+import {Background, Parallax} from "react-parallax";
 
 function HeroSection(){
     return(
-        <div className='hero-container'>
+        <>
+            <Parallax strength={-1000} >
+                <Background className="custom-bg">
+                </Background>
+                <div className="hero-container">
+                    <h1>Welcome to the Machine</h1>
+                    <p>Do not go gentle into that good night.</p>
 
-            <h1>Welcome to Jack's Website</h1>
-            <p>What are you waiting for?</p>
-            <div className="hero-btns">
-                <Button
-                    className='btns'
-                    buttonStyle='btn--outline'
-                    buttonSize='btn--large'
-                >
-                    GET STARTED
-                </Button>
-                <Button
-                    className='btns'
-                    buttonStyle='btn--primary'
-                    buttonSize='btn--large'
-                >
-                    WATCH TRAILER <i className='far fa-play-circle' />
-                </Button>
-            </div>
-        </div>
+                    <div className='hero-btns'>
+                        <Button
+                            className='btns'
+                            buttonStyle='btn--outline'
+                            buttonSize='btn--large'
+                        >
+                            PLACEHOLDER 1
+                        </Button>
+                        <Button
+                            className='btns'
+                            buttonStyle='btn--primary'
+                            buttonSize='btn--large'
+                        >
+                            PLACEHOLDER 2
+                        </Button>
+                    </div>
+                </div>
+            </Parallax>
+        </>
     );
 }
 
