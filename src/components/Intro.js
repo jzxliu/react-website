@@ -4,7 +4,7 @@ import './Intro.css';
 
 function Intro(){
     return(
-        <div className={"body"}>
+        <div className='intro-container'>
 
         </div>
     )
