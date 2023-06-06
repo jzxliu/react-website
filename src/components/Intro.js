@@ -1,8 +1,8 @@
 import React from "react";
 import '../App.css';
-import './Main.css';
+import './Intro.css';
 
-function Main(){
+function Intro(){
     return(
         <div className={"body"}>
 
@@ -10,4 +10,4 @@ function Main(){
     )
 }
 
-export default Main
+export default Intro
