@@ -1,10 +1,15 @@
-import React from "react";
+import React, {useRef} from "react";
 import '../App.css';
 import './HeroSection.css';
 import {Button} from "./Button";
 import {Background, Parallax} from "react-parallax";
 
 function HeroSection(){
+
+    const ref = useRef(null);
+
+    const executeScroll = () => ref.current.scrollIntoView({behavior: 'smooth'})
+
     return(
         <>
             <Parallax strength={-1000} >
@@ -19,19 +24,21 @@ function HeroSection(){
                             className='btns'
                             buttonStyle='btn--outline'
                             buttonSize='btn--large'
+                            onClick={executeScroll}
                         >
-                            PLACEHOLDER 1
+                            GET STARTED
                         </Button>
                         <Button
                             className='btns'
                             buttonStyle='btn--primary'
                             buttonSize='btn--large'
                         >
-                            PLACEHOLDER 2
+                            WHAT'S NEW?
                         </Button>
                     </div>
                 </div>
             </Parallax>
+            <div ref={ref}></div>
         </>
     );
 }

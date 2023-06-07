@@ -6,9 +6,9 @@ video {
     z-index: -1;
 }
 .custom-bg{
-    background: url("../images/img-home.jpeg") center center/cover no-repeat;
-    margin-top: 60vh;
-    height: 300vh;
+    background: url("../../public/images/img-home.jpeg") center center/cover no-repeat;
+    margin-top: 115vh;
+    height: 2000px;
     width: 100vw;
     align-items: center;
     box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.4);
@@ -17,6 +17,7 @@ video {
 
 .hero-container {
     height: 100vh;
+    min-height: 400px;
     width: 100vw;
     display: flex;
     flex-direction: column;

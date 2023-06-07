@@ -13,33 +13,33 @@ function Cards() {
                             src='images/img-9.jpg'
                             text='Personal Blog Website Using React'
                             label='Javascript'
-                            path='/services'
+                            path='/'
                         />
                         <CardItem
-                            src='images/img-2.jpg'
+                            src='images/unity.jpeg'
                             text='Unity 2d Platformer Game (WIP)'
                             label='C#'
-                            path='/services'
+                            path='/'
                         />
                     </ul>
                     <ul className='cards__items'>
                         <CardItem
-                            src='images/img-3.jpg'
+                            src='images/assembly-game.png'
                             text='Pink Floyd Themed Breakout Game'
                             label='MIPS Assembly'
-                            path='/services'
+                            path='https://github.com/jackzxliu/assembly_breakout_game'
                         />
                         <CardItem
                             src='images/img-4.jpg'
                             text='Discord Chat Bot With Game Interfaces'
                             label='Python'
-                            path='/products'
+                            path='/'
                         />
                         <CardItem
-                            src='images/img-8.jpg'
+                            src='images/stock-sim.png'
                             text='Stock Investment Simulator With Competitive Portfolios'
                             label='Java'
-                            path='/sign-up'
+                            path='https://github.com/CSC207-2022F-UofT/course-project-Team-Stonks'
                         />
                     </ul>
                 </div>
