@@ -2,7 +2,6 @@ import React, {useState, useEffect} from 'react';
 import {useParams} from "react-router-dom";
 import {request} from "graphql-request";
 import Posts from "./Posts";
-import Search from "../../Search";
 
 const BlogsBySearch = () => {
     const {slug} = useParams()

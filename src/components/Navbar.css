@@ -49,7 +49,6 @@
     display: flex;
     width: 200px;
     align-items: center;
-    justify-content: end;
 }
 
 .nav-item {
