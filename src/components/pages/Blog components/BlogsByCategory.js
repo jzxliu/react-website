@@ -1,9 +1,8 @@
 import React, {useState, useEffect} from 'react';
 import {useParams} from "react-router-dom";
 import {request} from "graphql-request";
-import BlogHeader from "./Blog-Header";
 import Posts from "./Posts";
-import Search from "./Search";
+import Search from "../../Search";
 
 const BlogsByCategory = () => {
     const {slug} = useParams()
@@ -46,8 +45,6 @@ const BlogsByCategory = () => {
 
     return (
         <>
-            <BlogHeader/>
-            <Search/>
             <Posts posts={posts}/>
         </>
     );

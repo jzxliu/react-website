@@ -1,10 +1,11 @@
-import React, {useEffect, useState} from 'react';
-import {request} from 'graphql-request'
-import '../../../App.css';
+import React, {useState, useEffect} from 'react';
+import {useParams} from "react-router-dom";
+import {request} from "graphql-request";
 import Posts from "./Posts";
 import Search from "../../Search";
 
-export default function Blogs() {
+const BlogsBySearch = () => {
+    const {slug} = useParams()
     const [posts, setPosts] = useState([]);
 
     useEffect(()=>{
@@ -13,7 +14,7 @@ export default function Blogs() {
                 'https://ca-central-1.cdn.hygraph.com/content/clin9ia78079n01ugb1jj7d3z/master',
                 `
           {
-          posts(orderBy: datePublished_ASC){
+          posts(where: {_search: "${slug}"}){
             id
             title
             datePublished
@@ -40,7 +41,7 @@ export default function Blogs() {
         };
 
         fetchPosts();
-    }, [])
+    }, [slug])
 
     return (
         <>
@@ -48,3 +49,5 @@ export default function Blogs() {
         </>
     );
 }
+
+export default BlogsBySearch;

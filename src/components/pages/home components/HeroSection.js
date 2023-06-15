@@ -3,7 +3,6 @@ import '../../../App.css';
 import './HeroSection.css';
 import {Button} from "../../Button";
 import {Background, Parallax} from "react-parallax";
-import {Link} from "react-router-dom";
 
 function HeroSection(){
 

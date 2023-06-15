@@ -1,0 +1,49 @@
+
+.article-container{
+    width:100%;
+    min-height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(5deg, rgb(7, 7, 10) 0%, rgb(17, 17, 20) 100%);
+}
+
+
+.article-container article .title{
+    text-align: center;
+    font-size: 2.5rem;
+    margin: 20px 0 10px 0;
+    text-transform: capitalize;
+    color: #fff;
+}
+
+.article-container article .published-time{
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+    color: #283858;
+}
+
+.article-container article .published-time i{
+    margin-right: 10px;
+}
+
+.article-container article .content{
+    margin-bottom: 20px;
+    width: 70%;
+    margin-left: 15%;
+}
+
+.article-container article .content :is(img, video){
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin: 10px 0;
+}
+
+.article-container article :is(h3, h4, h5, h6, p){
+    line-height: 1.8rem;
+    margin: 10px;
+    color: white;
+}
