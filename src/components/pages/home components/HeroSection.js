@@ -1,8 +1,9 @@
 import React, {useRef} from "react";
-import '../App.css';
+import '../../../App.css';
 import './HeroSection.css';
-import {Button} from "./Button";
+import {Button} from "../../Button";
 import {Background, Parallax} from "react-parallax";
+import {Link} from "react-router-dom";
 
 function HeroSection(){
 
@@ -32,6 +33,7 @@ function HeroSection(){
                             className='btns'
                             buttonStyle='btn--primary'
                             buttonSize='btn--large'
+                            link='/blog'
                         >
                             WHAT'S NEW?
                         </Button>

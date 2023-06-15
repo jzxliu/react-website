@@ -14,7 +14,7 @@ function Navbar() {
             <nav className='navbar'>
                 <div className='navbar-container'>
                     <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
-                        Jack's RAM <i className="fa-solid fa-ghost"/>
+                        J's Time Machine <i className="fa-solid fa-ghost"/>
                     </Link>
                 </div>
                 <div className='menu-icon' onClick = {handleClick}>

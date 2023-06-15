@@ -3,7 +3,9 @@ import './App.css';
 import Navbar from './components/Navbar';
 import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import Home from './components/pages/Home';
-import Blog from "./components/pages/Blog";
+import Blogs from "./components/pages/Blog components/Blogs";
+import Footer from "./components/Footer";
+import BlogsByCategory from "./components/pages/Blog components/BlogsByCategory";
 
 function App() {
   return (
@@ -13,9 +15,11 @@ function App() {
               <Routes>
                   <Route path='/'>
                       <Route index element={<Home/>}/>
-                      <Route path={'/blog'} element={<Blog/>}/>
+                      <Route path={'/blog'} element={<Blogs/>}/>
+                      <Route path={'/blog/:slug'} element={<BlogsByCategory/>}/>
                   </Route>
               </Routes>
+              <Footer />
           </Router>
       </>
   );

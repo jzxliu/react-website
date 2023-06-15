@@ -10,8 +10,8 @@ function Cards() {
                 <div className='cards__wrapper'>
                     <ul className='cards__items'>
                         <CardItem
-                            src='images/img-9.jpg'
-                            text='Personal Blog Website Using React'
+                            src='images/react.png'
+                            text='Personal Blogs Website Using React'
                             label='Javascript'
                             path='/'
                         />
