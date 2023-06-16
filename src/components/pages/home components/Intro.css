@@ -38,7 +38,6 @@
 
 @media screen and (max-width: 768px) {
     .intro-container{
-        height: 55vw;
         width: 100%;
         background-color: #000;
         display: flex;

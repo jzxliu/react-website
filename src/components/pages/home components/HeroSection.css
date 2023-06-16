@@ -7,7 +7,7 @@ video {
 }
 .custom-bg{
     background: url("../../../../public/images/img-home.jpeg") center center/cover no-repeat;
-    margin-top: 115vh;
+    margin-top: 100vh;
     height: 2000px;
     width: 100vw;
     align-items: center;

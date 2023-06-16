@@ -173,3 +173,15 @@
         transition: 250ms;
     }
 }
+
+@media screen and (max-width: 768px) {
+    .navbar-logo-text{
+        display: none;
+    }
+
+    .fa-ghost {
+        margin-left: 0.8rem;
+        margin-top: 0.3rem;
+        font-size: 1.8rem;
+    }
+}
