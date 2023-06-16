@@ -2,7 +2,6 @@ import React, {useEffect, useState} from 'react';
 import {request} from 'graphql-request'
 import '../../../App.css';
 import Posts from "./Posts";
-import Search from "../../Search";
 
 export default function Blogs() {
     const [posts, setPosts] = useState([]);
