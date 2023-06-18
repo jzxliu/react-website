@@ -1,5 +1,5 @@
 .cards {
-    padding: 4rem;
+    padding: 5vw;
     background: #0e0b16;
 }
 
@@ -13,13 +13,12 @@ h1 {
     flex-flow: column;
     align-items: center;
     max-width: 1120px;
-    width: 90%;
-    margin: 0 auto;
+    width: 80vw;
 }
 
 .cards__wrapper {
     position: relative;
-    margin: 50px 0 45px;
+    margin: 45px 0 45px;
 }
 
 .cards__items {
@@ -103,18 +102,20 @@ h1 {
 
 @media only screen and (min-width: 1200px) {
     .content__blog__container {
-        width: 84%;
+        width: 100%;
     }
 }
 
 @media only screen and (min-width: 1024px) {
     .cards__items {
         display: flex;
+        width: 100%;
     }
 }
 
 @media only screen and (max-width: 1024px) {
     .cards__item {
         margin-bottom: 2rem;
+        width: 100%;
     }
 }
