@@ -12,13 +12,13 @@ h1 {
     display: flex;
     flex-flow: column;
     align-items: center;
-    max-width: 1120px;
-    width: 80vw;
+    justify-content: center;
 }
 
 .cards__wrapper {
     position: relative;
     margin: 45px 0 45px;
+    width: 80vw;
 }
 
 .cards__items {
@@ -28,7 +28,7 @@ h1 {
 .cards__item {
     display: flex;
     flex: 1;
-    margin: 0 1rem;
+    padding: 1rem;
     border-radius: 10px;
     background-color: #000000;
 }
@@ -96,7 +96,7 @@ h1 {
 
 .cards__item__text {
     color: #e7dfdd;
-    font-size: 18px;
+    font-size: 120%;
     line-height: 24px;
 }
 
