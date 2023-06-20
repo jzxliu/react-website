@@ -39,7 +39,7 @@ function HeroSection(){
                     </div>
                 </div>
             </Parallax>
-            <div ref={ref}></div>
+            <div className='ref-div' ref={ref}></div>
         </>
     );
 }

@@ -50,8 +50,9 @@ video {
     margin: 6px;
 }
 
-.fa-play-circle {
-    margin-left: 4px;
+.ref-div {
+    position: absolute;
+    top: 100vh;
 }
 
 @media screen and (max-width: 768px) {

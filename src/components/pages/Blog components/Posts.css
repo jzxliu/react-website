@@ -1,22 +1,31 @@
 .posts-container{
-    width:95%;
-    margin: 20px auto;
+    width:100%;
+    background: #1e1b26;
+}
+
+.posts-wrapper{
+    width: 95%;
+    margin: auto;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    grid-gap: 10px;
+    grid-gap: 20px;
 }
 
 .posts-box{
     width: 100%;
-    padding: 10px 0;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 15px 0;
     overflow: hidden;
     cursor: pointer;
-    box-shadow: rgba(0, 0, 0, 0.05);
+    background: #050505;
+    box-shadow: 0 6px 25px rgba(255, 255, 255, 0.15);
 }
 
 .posts-img{
     width: 100%;
     height: 185px;
+    border-radius: 10px;
     overflow: hidden;
     position: relative;
 }
@@ -51,7 +60,7 @@
 .posts-text h3{
     font-size: 1.1rem;
     text-transform: capitalize;
-    color: #000;
+    color: white;
     font-weight: 500;
     margin: 5px 0;
     line-height: 25px;
@@ -77,4 +86,8 @@
 .posts-text .excerpt{
     font-size: 0.9rem;
     color: #888;
+}
+
+.posts-text :visited{
+    color: transparent;
 }
