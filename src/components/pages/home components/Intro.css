@@ -12,12 +12,14 @@
     margin-top: 0;
     margin-left: 12vw;
     width: 50%;
+    justify-content: center;
 }
 
 .text-box > h1 {
     color: #fff;
     font-size: 4vw;
-    text-align: left;
+    justify-self: center;
+    background: red;
 }
 
 .text-box > text {
@@ -33,7 +35,6 @@
     width: 30%;
     height: 60%;
     object-fit: contain;
-    transition: all 0.2s linear;
 }
 
 @media screen and (max-width: 768px) {
@@ -52,6 +53,7 @@
 
     .text-box{
         margin-top: 10%;
+        margin-left: 0;
         width: 80%;
     }
 

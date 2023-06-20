@@ -5,6 +5,10 @@
     font-family: 'PT Sans', sans-serif;
 }
 
+html{
+    background-color: rgb(16, 16, 20);
+}
+
 .home,
 .services,
 .products,
