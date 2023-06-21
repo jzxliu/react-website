@@ -2,10 +2,13 @@ import React, {useEffect, useState} from 'react';
 import {request} from "graphql-request";
 import {useParams} from "react-router-dom";
 import "./Article.css"
+import {useMyContext} from "./Store";
 
 const Article = () => {
     const {slug} = useParams()
     const [article, setArticle] = useState([]);
+
+    const { setLoading } = useMyContext();
 
     useEffect(()=>{
         const fetchPosts = async () => {
@@ -29,8 +32,9 @@ const Article = () => {
             setArticle(posts);
         };
 
-        fetchPosts();
-    }, [slug])
+        setLoading(true);
+        fetchPosts().finally(() => setLoading(false));
+    }, [slug, setLoading])
 
     return (
         <div className='article-container'>

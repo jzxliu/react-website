@@ -1,7 +1,7 @@
 import React, {useRef} from "react";
-import '../../../App.css';
+import '../../App.css';
 import './HeroSection.css';
-import {Button} from "../../Button";
+import {Button} from "../Button";
 import {Background, Parallax} from "react-parallax";
 
 function HeroSection(){

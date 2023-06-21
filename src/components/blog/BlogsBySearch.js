@@ -2,10 +2,13 @@ import React, {useState, useEffect} from 'react';
 import {useParams} from "react-router-dom";
 import {request} from "graphql-request";
 import Posts from "./Posts";
+import {useMyContext} from "./Store";
 
 const BlogsBySearch = () => {
     const {slug} = useParams()
     const [posts, setPosts] = useState([]);
+
+    const {setLoading} = useMyContext();
 
     useEffect(()=>{
         const fetchPosts = async () => {
@@ -32,12 +35,11 @@ const BlogsBySearch = () => {
         }
         `
             );
-
             setPosts(posts);
         };
-
-        fetchPosts();
-    }, [slug])
+        setLoading(true);
+        fetchPosts().finally(() => setLoading(false));
+    }, [slug, setLoading])
 
     return (
         <>

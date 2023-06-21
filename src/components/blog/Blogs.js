@@ -1,10 +1,13 @@
 import React, {useEffect, useState} from 'react';
 import {request} from 'graphql-request'
-import '../../../App.css';
+import '../../App.css';
 import Posts from "./Posts";
+import {useMyContext} from "./Store";
 
 export default function Blogs() {
     const [posts, setPosts] = useState([]);
+
+    const {setLoading} = useMyContext();
 
     useEffect(()=>{
         const fetchPosts = async () => {
@@ -34,9 +37,9 @@ export default function Blogs() {
 
             setPosts(posts);
         };
-
-        fetchPosts();
-    }, [])
+        setLoading(true);
+        fetchPosts().finally(() => setLoading(false));
+    }, [setLoading])
 
     return (
         <>
