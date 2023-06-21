@@ -21,16 +21,6 @@ const Article = () => {
             content {
               html
             }
-            coverPhoto {
-              url
-            }
-            categories {
-              name
-              id
-              slug
-              color {css}
-            }
-            description
           }
         }
         `

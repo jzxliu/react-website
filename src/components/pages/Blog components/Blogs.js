@@ -12,14 +12,11 @@ export default function Blogs() {
                 'https://ca-central-1.cdn.hygraph.com/content/clin9ia78079n01ugb1jj7d3z/master',
                 `
           {
-          posts(orderBy: datePublished_ASC){
+          posts(orderBy: datePublished_DESC){
             id
             title
             datePublished
             slug
-            content {
-              html
-            }
             coverPhoto {
               url
             }

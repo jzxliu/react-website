@@ -18,9 +18,6 @@ const BlogsBySearch = () => {
             title
             datePublished
             slug
-            content {
-              html
-            }
             coverPhoto {
               url
             }

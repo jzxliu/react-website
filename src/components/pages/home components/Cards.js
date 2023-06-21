@@ -13,7 +13,7 @@ function Cards() {
                             src='images/react.png'
                             text='Personal Blogs Website Using React'
                             label='Javascript'
-                            path='/'
+                            path='https://github.com/jackzxliu/react-website'
                         />
                         <CardItem
                             src='images/unity.jpeg'

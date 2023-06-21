@@ -42,7 +42,7 @@ const Posts = ({posts}) => {
                                 </span>
                                 </div>
 
-                                <Link to={`/article/${post.slug}`}>
+                                <Link to={`/article/${post.slug}`} className='posts-link'>
                                     <h3>{post.title}</h3>
                                     <p className='excerpt'>{post.description}</p>
                                 </Link>

@@ -18,9 +18,6 @@ const BlogsByCategory = () => {
             title
             datePublished
             slug
-            content {
-              html
-            }
             coverPhoto {
               url
             }

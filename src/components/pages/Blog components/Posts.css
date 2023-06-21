@@ -55,11 +55,20 @@
     padding: 2px 10px;
     font-size: 0.9rem;
     color: white;
+    text-decoration: none;
+}
+
+.post-category{
+    text-decoration: none;
+}
+
+.posts-link {
+    text-decoration: none;
 }
 
 .posts-text h3{
     font-size: 1.1rem;
-    text-transform: capitalize;
+    text-decoration: none;
     color: white;
     font-weight: 500;
     margin: 5px 0;
@@ -88,6 +97,17 @@
     color: #888;
 }
 
+.posts-text{
+}
+
 .posts-text :visited{
     color: transparent;
+}
+
+.posts-text :active{
+    color: yellow;
+}
+
+.posts-text :focus{
+    color: pink;
 }

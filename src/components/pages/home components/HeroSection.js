@@ -17,7 +17,7 @@ function HeroSection(){
                 </Background>
                 <div className="hero-container">
                     <h1>Welcome to the Machine</h1>
-                    <p>Do not go gentle into that good night.</p>
+                    <p>All you touch and all you see, is all your life will ever be.</p>
 
                     <div className='hero-btns'>
                         <Button
