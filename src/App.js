@@ -10,6 +10,7 @@ import BlogsBySearch from "./components/blog/BlogsBySearch";
 import Article from "./components/blog/Article";
 import Loading from "./components/blog/Loading";
 import {useMyContext} from "./components/blog/Store";
+import About from "./components/about/About";
 
 function App() {
 
@@ -27,6 +28,7 @@ function App() {
                         <Route path={'/blog/:slug'} element={<BlogsByCategory/>}/>
                         <Route path={'/search/:slug'} element={<BlogsBySearch/>}/>
                         <Route path={'/article/:slug'} element={<Article/>}/>
+                        <Route path={'/about'} element={<About/>}/>
                     </Route>
                 </Routes>
                 <Footer/>

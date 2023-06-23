@@ -3,6 +3,7 @@ import {request} from 'graphql-request'
 import '../../App.css';
 import Posts from "./Posts";
 import {useMyContext} from "./Store";
+import Pagination from "./Pagination";
 
 export default function Blogs() {
     const [posts, setPosts] = useState([]);
@@ -44,6 +45,7 @@ export default function Blogs() {
     return (
         <>
             <Posts posts={posts}/>
+            <Pagination/>
         </>
     );
 }

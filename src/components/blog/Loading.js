@@ -7,7 +7,7 @@ TopBarProgress.config({
         "0.5": "#fff",
         "1.0": "#fff"
     },
-    shadowBlur: 0,
+    shadowBlur: 10,
     barThickness: 2
 })
 const Loading = () => {
