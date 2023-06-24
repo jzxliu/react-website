@@ -9,6 +9,9 @@
     background: linear-gradient(5deg, rgb(7, 7, 10) 0%, rgb(17, 17, 20) 100%);
 }
 
+.article-container article{
+    color: #fff;
+}
 
 .article-container article .title{
     text-align: center;
@@ -36,14 +39,21 @@
 }
 
 .article-container article .content :is(img, video){
-    width: 100%;
+    width: 60%;
     height: 100%;
     object-fit: cover;
-    margin: 10px 0;
+    margin: 10px 20%;
+    color: white;
 }
 
 .article-container article :is(h3, h4, h5, h6, p){
     line-height: 1.8rem;
     margin: 10px;
     color: white;
+}
+
+.article-container article blockquote{
+    margin: 0 50px;
+    line-height: 1.5rem;
+
 }
