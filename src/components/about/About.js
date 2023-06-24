@@ -8,7 +8,7 @@ function About() {
             <p>
                 This site is developed using React.js <br/>
                 Using GraphQL as database <br/>
-                and Hosted using Netlify
+                and hosted using Netlify
             </p>
         </div>
     );
