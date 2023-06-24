@@ -40,8 +40,8 @@
 
 .article-container article .content :is(img, video){
     width: 60%;
-    height: 100%;
-    object-fit: cover;
+    height: auto;
+    object-fit: fill;
     margin: 10px 20%;
     color: white;
 }
@@ -56,4 +56,19 @@
     margin: 0 50px;
     line-height: 1.5rem;
     color: #ddd;
+}
+
+@media screen and (max-width: 768px) {
+    .article-container article .content{
+        margin-bottom: 20px;
+        width: 84%;
+        margin-left: 7%;
+    }
+
+    .article-container article .content :is(img, video){
+        width: 70%;
+        height: auto;
+        object-fit: fill;
+        margin: 10px 15%;
+    }
 }
