@@ -13,6 +13,22 @@
     color: #fff;
 }
 
+.article-container .cover-container{
+    width: 70vw;
+    margin: 5vh 15vw;
+    overflow: hidden;
+    position: relative;
+    object-fit: scale-down;
+}
+
+.article-container .cover-container img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
 .article-container article .title{
     text-align: center;
     font-size: 2.5rem;

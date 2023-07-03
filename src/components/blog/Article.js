@@ -21,6 +21,9 @@ const Article = () => {
             title
             datePublished
             slug
+            coverPhoto{
+              url
+            }
             content {
               html
             }
@@ -42,6 +45,9 @@ const Article = () => {
                 article?.map(article =>(
                     <React.Fragment key={article.id}>
                         <article>
+                            <div className="cover-container">
+                                <img src={article.coverPhoto.url} alt=""/>
+                            </div>
                             <h2 className="title">{article.title}</h2>
                             <div className="published-time">
                                 <i className="far fa-clock"></i>

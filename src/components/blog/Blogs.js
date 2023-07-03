@@ -7,7 +7,6 @@ import Pagination from "./Pagination";
 
 export default function Blogs() {
     const [posts, setPosts] = useState([]);
-
     const {setLoading} = useMyContext();
 
     useEffect(()=>{
@@ -32,6 +31,12 @@ export default function Blogs() {
             }
             description
           }
+          
+          countConnection: postsConnection{
+            aggregate{
+              count
+            }
+          }
         }
         `
             );
@@ -39,7 +44,12 @@ export default function Blogs() {
             setPosts(posts);
         };
         setLoading(true);
-        fetchPosts().finally(() => setLoading(false));
+        fetchPosts()
+            .then(() => {
+                }
+            )
+            .catch()
+            .finally(() => setLoading(false));
     }, [setLoading])
 
     return (
