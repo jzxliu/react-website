@@ -4,6 +4,7 @@ import '../../App.css';
 import Posts from "./Posts";
 import {useMyContext} from "./Store";
 import Pagination from "./Pagination";
+import {QUERY_BLOGS, QUERY_URL} from "../../graphql/Queries";
 
 export default function Blogs() {
     const [posts, setPosts] = useState([]);
@@ -12,33 +13,8 @@ export default function Blogs() {
     useEffect(()=>{
         const fetchPosts = async () => {
             const { posts } = await request(
-                'https://ca-central-1.cdn.hygraph.com/content/clin9ia78079n01ugb1jj7d3z/master',
-                `
-          {
-          posts(orderBy: datePublished_DESC){
-            id
-            title
-            datePublished
-            slug
-            coverPhoto {
-              url
-            }
-            categories {
-              name
-              id
-              slug
-              color {css}
-            }
-            description
-          }
-          
-          countConnection: postsConnection{
-            aggregate{
-              count
-            }
-          }
-        }
-        `
+                QUERY_URL,
+                QUERY_BLOGS
             );
 
             setPosts(posts);

@@ -3,6 +3,7 @@ import {request} from "graphql-request";
 import {useParams} from "react-router-dom";
 import "./Article.css"
 import {useMyContext} from "./Store";
+import {QUERY_POST, QUERY_URL} from "../../graphql/Queries";
 
 const Article = () => {
     const {slug} = useParams()
@@ -13,23 +14,9 @@ const Article = () => {
     useEffect(()=>{
         const fetchPosts = async () => {
             const { posts } = await request(
-                'https://ca-central-1.cdn.hygraph.com/content/clin9ia78079n01ugb1jj7d3z/master',
-                `
-          {
-          posts(where: {_search: "${slug}"}){
-            id
-            title
-            datePublished
-            slug
-            coverPhoto{
-              url
-            }
-            content {
-              html
-            }
-          }
-        }
-        `
+                QUERY_URL,
+                QUERY_POST,
+                {slug}
             );
 
             setArticle(posts);

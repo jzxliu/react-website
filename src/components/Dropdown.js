@@ -3,6 +3,8 @@ import {Link, useLocation} from 'react-router-dom';
 import {request} from "graphql-request";
 import './Dropdown.css';
 
+import {QUERY_SLUG_CATEGORIES, QUERY_URL} from "../graphql/Queries";
+
 const Dropdown = () => {
     const [click, setClick] = useState(false);
 
@@ -13,17 +15,9 @@ const Dropdown = () => {
     useEffect(() => {
         const fetchCategories = async () => {
             const { categories } = await request(
-                'https://ca-central-1.cdn.hygraph.com/content/clin9ia78079n01ugb1jj7d3z/master',
-                `
-      {
-        categories {
-          name
-          slug
-        }
-      }
-    `
+                QUERY_URL,
+                QUERY_SLUG_CATEGORIES
             );
-
             setCategories(categories);
         };
 

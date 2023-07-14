@@ -3,6 +3,7 @@ import {useParams} from "react-router-dom";
 import {request} from "graphql-request";
 import Posts from "./Posts";
 import {useMyContext} from "./Store";
+import {QUERY_BY_CATEGORY, QUERY_URL} from "../../graphql/Queries";
 
 const BlogsByCategory = () => {
     const {slug} = useParams()
@@ -13,27 +14,9 @@ const BlogsByCategory = () => {
     useEffect(()=>{
         const fetchPosts = async () => {
             const { posts } = await request(
-                'https://ca-central-1.cdn.hygraph.com/content/clin9ia78079n01ugb1jj7d3z/master',
-                `
-          {
-          posts(where: {categories_some: {slug:"${slug}"}}){
-            id
-            title
-            datePublished
-            slug
-            coverPhoto {
-              url
-            }
-            categories {
-              name
-              id
-              slug
-              color {css}
-            }
-            description
-          }
-        }
-        `
+                QUERY_URL,
+                QUERY_BY_CATEGORY,
+                {slug}
             );
             setPosts(posts);
         };
