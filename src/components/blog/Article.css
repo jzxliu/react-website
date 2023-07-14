@@ -14,8 +14,8 @@
 }
 
 .article-container .cover-container{
-    width: 70vw;
-    margin: 5vh 15vw;
+    width: 70%;
+    margin: 5% 15%;
     overflow: hidden;
     position: relative;
     object-fit: scale-down;

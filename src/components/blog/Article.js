@@ -1,47 +1,27 @@
-import React, {useEffect, useState} from 'react';
-import {request} from "graphql-request";
-import {useParams} from "react-router-dom";
+import React from 'react';
 import "./Article.css"
-import {useMyContext} from "./Store";
-import {QUERY_POST, QUERY_URL} from "../../graphql/Queries";
+import {QUERY_POST} from "../../graphql/Queries";
+import useQueryPosts from "../../graphql/useQueryPosts";
 
 const Article = () => {
-    const {slug} = useParams()
-    const [article, setArticle] = useState([]);
-
-    const { setLoading } = useMyContext();
-
-    useEffect(()=>{
-        const fetchPosts = async () => {
-            const { posts } = await request(
-                QUERY_URL,
-                QUERY_POST,
-                {slug}
-            );
-
-            setArticle(posts);
-        };
-
-        setLoading(true);
-        fetchPosts().finally(() => setLoading(false));
-    }, [slug, setLoading])
-
+    const {posts, error} = useQueryPosts({query: QUERY_POST});
+    if (error) return <h2>{error}</h2>
     return (
         <div className='article-container'>
             {
-                article?.map(article =>(
-                    <React.Fragment key={article.id}>
+                posts?.map(posts =>(
+                    <React.Fragment key={posts.id}>
                         <article>
                             <div className="cover-container">
-                                <img src={article.coverPhoto.url} alt=""/>
+                                <img src={posts.coverPhoto.url} alt=""/>
                             </div>
-                            <h2 className="title">{article.title}</h2>
+                            <h2 className="title">{posts.title}</h2>
                             <div className="published-time">
                                 <i className="far fa-clock"></i>
-                                <span>{new Date(article.datePublished).toDateString().slice(4)}</span>
+                                <span>{new Date(posts.datePublished).toDateString().slice(4)}</span>
                             </div>
 
-                            <div className="content" dangerouslySetInnerHTML={{__html:article.content.html}}>
+                            <div className="content" dangerouslySetInnerHTML={{__html:posts.content.html}}>
 
                             </div>
                         </article>
