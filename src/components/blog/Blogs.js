@@ -1,33 +1,14 @@
-import React, {useEffect, useState} from 'react';
-import {request} from 'graphql-request'
+import React from 'react';
 import '../../App.css';
 import Posts from "./Posts";
-import {useMyContext} from "./Store";
 import Pagination from "./Pagination";
-import {QUERY_BLOGS, QUERY_URL} from "../../graphql/Queries";
+import {QUERY_BLOGS} from "../../graphql/Queries";
+import useQueryPosts from "../../graphql/useQueryPosts";
 
 export default function Blogs() {
-    const [posts, setPosts] = useState([]);
-    const {setLoading} = useMyContext();
 
-    useEffect(()=>{
-        const fetchPosts = async () => {
-            const { posts } = await request(
-                QUERY_URL,
-                QUERY_BLOGS
-            );
-
-            setPosts(posts);
-        };
-        setLoading(true);
-        fetchPosts()
-            .then(() => {
-                }
-            )
-            .catch()
-            .finally(() => setLoading(false));
-    }, [setLoading])
-
+    const {posts, error} = useQueryPosts({query: QUERY_BLOGS});
+    if (error) return <h2>{error}</h2>
     return (
         <>
             <Posts posts={posts}/>
