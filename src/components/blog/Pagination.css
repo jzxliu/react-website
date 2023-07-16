@@ -1,0 +1,45 @@
+.pagination{
+    width: 95%;
+    margin: 25px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    user-select: none;
+}
+
+.pagination .prev-next{
+    text-transform: capitalize;
+    cursor: pointer;
+    color: #fff;
+    font-weight: 500;
+    transition: all 0.3s linear;
+}
+
+.pagination .prev-next i{
+    font-size: 0.85rem;
+}
+
+.pagination .numbers{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.pagination .numbers li{
+    color: #fff;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s linear;
+}
+
+.pagination .numbers li:is(:hover, .active){
+    background: #fff;
+    color: #000;
+
+}

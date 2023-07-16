@@ -1,35 +1,43 @@
 import {useEffect, useState} from 'react';
-import {useParams} from "react-router-dom";
+import {useParams, useLocation} from "react-router-dom";
 import {useMyContext} from "../components/blog/Store";
 import {request} from "graphql-request";
 import {QUERY_URL} from "./Queries";
 
-const useQueryPosts = ({query}) => {
+const useQueryPosts = ({query, limit= 2}) => {
     const {slug} = useParams();
+    const location = useLocation();
+
+    const page = Number((new URLSearchParams(location.search)).get('page')) || 1;
+    const skip = (page - 1) * limit;
+
     const [posts, setPosts] = useState([]);
     const [error, setError] = useState([]);
 
-    const {setLoading} = useMyContext();
+    const {setLoading, setTotalPage} = useMyContext();
 
     useEffect(()=>{
+        setLoading(true);
         const fetchPosts = async () => {
             try {
-                const {posts} = await request(
+                const {posts, countConnection} = await request(
                     QUERY_URL,
                     query,
-                    {slug}
+                    {slug, limit, skip}
                 );
+                const count = countConnection?.aggregate?.count || 0;
+                setTotalPage(Math.ceil(count / limit));
                 setPosts(posts);
                 setError(null);
             } catch (error) {
+                setTotalPage(1);
                 setError(error.message);
                 setPosts([]);
             }
         };
-        setLoading(true);
         fetchPosts()
             .finally(() => setLoading(false));
-    }, [query, slug, setLoading])
+    }, [query, slug, limit, skip, setLoading, setTotalPage])
     return {posts, error}
 };
 

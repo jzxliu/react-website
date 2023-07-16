@@ -3,6 +3,7 @@ import {Link} from "react-router-dom";
 import './Posts.css';
 
 const Posts = ({posts}) => {
+
     return (
         <div className='posts-container'>
             <div className="posts-wrapper">

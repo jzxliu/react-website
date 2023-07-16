@@ -5,8 +5,12 @@ export const Store = React.createContext();
 export const ContextProvider = ({children}) => {
 
     const [loading, setLoading] = useState(false);
+    const [totalPage, setTotalPage] = useState(1);
 
-    const value = {loading, setLoading}
+    const value = {
+        loading, setLoading,
+        totalPage, setTotalPage
+    }
 
     return(
         <Store.Provider value={value}>
