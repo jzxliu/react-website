@@ -5,6 +5,7 @@
     justify-content: space-between;
     align-items: center;
     user-select: none;
+    text-decoration: none;
 }
 
 .pagination .prev-next{
@@ -13,6 +14,7 @@
     color: #fff;
     font-weight: 500;
     transition: all 0.3s linear;
+    text-decoration: none;
 }
 
 .pagination .prev-next i{
@@ -26,6 +28,11 @@
     align-items: center;
     gap: 5px;
     cursor: pointer;
+    text-decoration: none;
+}
+
+.pagination .numbers .num{
+    text-decoration: none;
 }
 
 .pagination .numbers li{

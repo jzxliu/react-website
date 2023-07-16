@@ -42,7 +42,7 @@ const Pagination = ({totalPage}) => {
             <ul className="numbers">
                 {
                     pageNumbers.map(num =>(
-                        <Link to={`?page=${num}`} key = {num}>
+                        <Link className='num' to={`?page=${num}`} key = {num}>
                             <li className={page === num? 'active' : ''}> {num} </li>
                         </Link>
                     ))

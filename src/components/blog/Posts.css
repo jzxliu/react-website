@@ -101,18 +101,3 @@
     font-size: 0.9rem;
     color: #888;
 }
-
-.posts-text{
-}
-
-.posts-text :visited{
-    color: transparent;
-}
-
-.posts-text :active{
-    color: yellow;
-}
-
-.posts-text :focus{
-    color: pink;
-}
