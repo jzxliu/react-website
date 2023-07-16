@@ -4,7 +4,7 @@ import {useMyContext} from "../components/blog/Store";
 import {request} from "graphql-request";
 import {QUERY_URL} from "./Queries";
 
-const useQueryPosts = ({query, limit= 2}) => {
+const useQueryPosts = ({query, limit= 8}) => {
     const {slug} = useParams();
     const location = useLocation();
 
