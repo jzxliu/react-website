@@ -11,6 +11,7 @@ import Article from "./components/blog/Article";
 import Loading from "./components/blog/Loading";
 import {useMyContext} from "./components/blog/Store";
 import About from "./components/about/About";
+import NotFound from"./components/NotFound";
 
 function App() {
 
@@ -29,6 +30,7 @@ function App() {
                         <Route path={'/search/:slug'} element={<BlogsBySearch/>}/>
                         <Route path={'/article/:slug'} element={<Article/>}/>
                         <Route path={'/about'} element={<About/>}/>
+                        <Route path={'*'} element={<NotFound/>}/>
                     </Route>
                 </Routes>
                 <Footer/>

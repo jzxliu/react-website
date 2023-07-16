@@ -16,6 +16,10 @@ const useQueryPosts = ({query, limit= 8}) => {
 
     const {setLoading, setTotalPage} = useMyContext();
 
+    useEffect(() => {
+        setTotalPage(1);
+    }, [setTotalPage])
+
     useEffect(()=>{
         setLoading(true);
         const fetchPosts = async () => {

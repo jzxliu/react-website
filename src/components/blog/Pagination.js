@@ -31,6 +31,8 @@ const Pagination = ({totalPage}) => {
 
     },[totalPage, page])
 
+    if (totalPage <= 1) return null;
+
     return (
         <div className='pagination'>
             <Link to={`?page=${page - 1 <= 1 ? 1: page - 1}`} className='prev-next'>
