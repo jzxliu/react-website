@@ -13,4 +13,6 @@
 .about-container p{
     color: white;
     width: 50%;
+    margin: 0 25% 0 25%;
+    font-size: medium;
 }
