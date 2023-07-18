@@ -13,9 +13,13 @@
     color: #fff;
 }
 
+.article-ref-div{
+    height: 60px;
+}
+
 .article-container .cover-container{
     width: 70%;
-    margin: 5% 15%;
+    margin: 5vh 15% 0 15%;
     overflow: hidden;
     position: relative;
     object-fit: scale-down;
