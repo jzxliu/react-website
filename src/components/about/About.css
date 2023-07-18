@@ -16,3 +16,10 @@
     margin: 0 25% 0 25%;
     font-size: medium;
 }
+@media screen and (max-width: 768px) {
+    .about-container p {
+        width: 80%;
+        margin: 0 10% 0 10%;
+        font-size: medium;
+    }
+}
