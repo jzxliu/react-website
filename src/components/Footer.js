@@ -28,6 +28,16 @@ function Footer() {
                         >
                             <i className='fab fa-instagram' />
                         </Link>
+
+                        <Link
+                            to='https://open.spotify.com/user/ez0xpfhfna9e7qllhbi1j8t4y?si=fe9d15fccdad4cf6'
+                            className='nav-links-mobile'
+                            target='_blank'
+                            aria-label='Spotify'
+                        >
+                            <i className="fa-brands fa-spotify"></i>
+                        </Link>
+
                         <Link
                             class='social-icon-link youtube'
                             to='https://www.youtube.com/channel/UC5Xp38FLIDTffylAFaAp9Zg'

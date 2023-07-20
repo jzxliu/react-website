@@ -63,6 +63,15 @@ function Navbar() {
                     </li>
                     <div className="media-display">
                         <Link
+                            class='social-icon-link email'
+                            to='mailto:jacks.liu@mail.utoronto.ca'
+                            target='_blank'
+                            aria-label='Email'
+                        >
+                            <i className="fa-solid fa-envelope"></i>
+                        </Link>
+
+                        <Link
                             to='https://www.instagram.com/jzxliu/'
                             className='nav-links-mobile'
                             onClick={closeMobileMenu}
@@ -77,6 +86,15 @@ function Navbar() {
                         >
                             <i className="fa-brands fa-spotify"></i>
                         </Link>
+
+                        <Link
+                            to='https://www.youtube.com/channel/UC5Xp38FLIDTffylAFaAp9Zg'
+                            class='social-icon-link youtube'
+                            onClick={closeMobileMenu}
+                        >
+                            <i className='fab fa-youtube' />
+                        </Link>
+
                     </div>
                     <div className="search-container">
                         <Search/>
