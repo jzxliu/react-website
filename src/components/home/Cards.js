@@ -13,7 +13,7 @@ function Cards() {
                             src='images/react.png'
                             text='Personal Blogs Website Using React'
                             label='Javascript'
-                            path='https://github.com/jackzxliu/react-website'
+                            path='https://github.com/jzxliu/react-website'
                         />
                         <CardItem
                             src='images/unity.jpeg'
@@ -27,7 +27,7 @@ function Cards() {
                             src='images/assembly-game.png'
                             text='Pink Floyd Themed Breakout Game'
                             label='MIPS Assembly'
-                            path='https://github.com/jackzxliu/assembly_breakout_game'
+                            path='https://github.com/jzxliu/assembly_breakout_game'
                         />
                         <CardItem
                             src='images/img-4.jpg'
