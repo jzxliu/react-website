@@ -65,8 +65,38 @@
     color: white;
 }
 
-.article-container article :is(h3, h4, h5, h6, p){
+.article-container article p{
     line-height: 1.8rem;
+    margin: 10px;
+    color: white;
+}
+
+.article-container article h6{
+    line-height: 2rem;
+    margin: 10px;
+    color: white;
+}
+
+.article-container article h5{
+    line-height: 2.2rem;
+    margin: 10px;
+    color: white;
+}
+
+.article-container article h4{
+    line-height: 2.5rem;
+    margin: 10px;
+    color: white;
+}
+
+.article-container article h3{
+    line-height: 2.8rem;
+    margin: 10px;
+    color: white;
+}
+
+.article-container article h2{
+    line-height: 3rem;
     margin: 10px;
     color: white;
 }
