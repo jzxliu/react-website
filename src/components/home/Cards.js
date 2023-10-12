@@ -16,9 +16,9 @@ function Cards() {
                             path='https://github.com/jzxliu/react-website'
                         />
                         <CardItem
-                            src='images/unity.jpeg'
-                            text='Unity 2d Platformer Game (WIP)'
-                            label='C#'
+                            src='images/fake_new_detector.png'
+                            text='Fake News Detector'
+                            label='Python'
                             path='/'
                         />
                     </ul>
