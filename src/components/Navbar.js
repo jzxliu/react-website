@@ -33,7 +33,7 @@ function Navbar() {
                 <div className='navbar-container'>
                     <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
                         <div className="navbar-logo-text">
-                            Jack's Time Machine
+                            Jay's Time Machine
                         </div>
                         <i className="fa-solid fa-ghost"/>
                     </Link>
