@@ -17,9 +17,9 @@ function Cards() {
                         />
                         <CardItem
                             src='images/fake_new_detector.png'
-                            text='Fake News Detector'
+                            text='Python ML Projects'
                             label='Python'
-                            path='/'
+                            path='https://github.com/jzxliu/ML-Project'
                         />
                     </ul>
                     <ul className='cards__items'>
@@ -30,10 +30,10 @@ function Cards() {
                             path='https://github.com/jzxliu/assembly_breakout_game'
                         />
                         <CardItem
-                            src='images/img-4.jpg'
-                            text='Discord Chat Bot With Game Interfaces'
+                            src='images/sudoku.png'
+                            text='Python AI Projects'
                             label='Python'
-                            path='/'
+                            path='https://github.com/jzxliu/AI-Projects'
                         />
                         <CardItem
                             src='images/stock-sim.png'
