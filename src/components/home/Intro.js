@@ -6,7 +6,7 @@ function Intro(){
     return(
         <div className='intro-container'>
             <div className='text-box'>
-                <h1> Hello! My name is Jack.</h1>
+                <h1> Hello! My name is Jay.</h1>
                 <text>
                     <br/>
                     I'm a second year Computer-Science specialist at the University of Toronto. <br/>
