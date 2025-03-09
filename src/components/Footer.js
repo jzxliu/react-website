@@ -14,7 +14,7 @@ function Footer() {
                     <div className='social-icons'>
                         <Link
                             class='social-icon-link email'
-                            to='mailto:jacks.liu@mail.utoronto.ca'
+                            to='mailto:jayliu.uoft@gmail.com'
                             target='_blank'
                             aria-label='Email'
                         >
