@@ -24,6 +24,20 @@ function Cards() {
                     </ul>
                     <ul className='cards__items'>
                         <CardItem
+                            src='images/skillz.png'
+                            text='Skill Development Site Design With Figma'
+                            label='Figma'
+                            path='https://www.figma.com/design/iiiMyD06UIUNZsoSf067X9/Skillz-Website-v2%2C-current?t=23fXub1vfFgdwL3t-1'
+                        />
+                        <CardItem
+                            src='images/segmentation.png'
+                            text='Pediatric Brain Tumor Segmentation with Neural Networks'
+                            label='Python'
+                            path='https://drive.google.com/drive/folders/1UZkI5X3t7bnQrsrm19ruLhAuWGXSHQxI?usp=sharing'
+                        />
+                    </ul>
+                    <ul className='cards__items'>
+                        <CardItem
                             src='images/assembly-game.png'
                             text='Pink Floyd Themed Breakout Game'
                             label='MIPS Assembly'
