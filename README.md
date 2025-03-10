@@ -2,7 +2,7 @@ This site was bootstrapped with create-react-app (https://github.com/facebook/cr
 
 GraphQL is used for managing blog contents, hosted through https://hygraph.com/
 
-Hosted on https://www.netlify.com/
+Deployed through pipeline on https://www.netlify.com/
 
 Many blogs are unfinished because I added them to test features. 
 
